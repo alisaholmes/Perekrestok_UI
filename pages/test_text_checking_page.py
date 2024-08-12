@@ -1,32 +1,27 @@
-from selene import browser, be
-
+from selene import browser, be, by
+import allure
 
 class TextChecking:
     def open(self):
-        browser.open("cat")  # переход в каталог
+      with allure.step('Открыть страницу https://www.perekrestok.ru/  и перейти в каталог'):
+        browser.open("cat")
+
+    def sales_go_to_section(self):
+      with allure.step('Нажать на кнопку Скидки'):
+        browser.element('[class="sc-kstqJO gsLcgV"]').click()
+
+    def product_card(self):
+     with allure.step('Перейти в карточку товара'):
+        browser.element('[href="/cat/150/p/kartofel-mytyj-2099571"]').click()
 
 
-    def sales_go_to_section(cls):
-        browser.element('[class="sc-kstqJO gsLcgV"]').click()  # нажатие на кнопку "Скидки" и переход в раздел
+    def add_to_cart(self):
+      with allure.step('Добавить товар в корзину'):
+        browser.element('[class="button-children"]').click()
+
+    def should_have_text(self):
+     with allure.step('Проверить текст'):
+        browser.element(by.partial_text("Укажите свой адрес")).should(be.visible)
 
 
-    def product_card(cls):
-        browser.element('[href="/cat/150/p/kartofel-mytyj-2099571"]').click()  # переход в карточку товара
-
-
-    def add_to_cart(cls):
-        browser.element('[class="button-children"]').click()  # нажатие в "корзину"
-
-
-    def should_have_text(cls, param):
-        browser.element(by.partial_text("Укажите свой адрес")).should(be.visible)  # проверка фразы
-
-    checking = TextChecking()
-
-
-
-
-
-
-
-
+text_checking = TextChecking()
