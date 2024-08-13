@@ -1,8 +1,8 @@
 allure-results
 allure-report
-.env
+Perekrestok_UI/.env
 .venv
-.idea
+../.idea
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -128,7 +128,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+Perekrestok_UI/.env
 .venv
 env/
 venv/
