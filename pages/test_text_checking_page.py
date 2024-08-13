@@ -12,7 +12,7 @@ class TextChecking:
 
     def product_card(self):
      with allure.step('Перейти в карточку товара'):
-        browser.element('[href="/cat/150/p/kartofel-mytyj-2099571"]').click()
+        browser.element('[class="product-card__link"]').click()
 
 
     def add_to_cart(self):
