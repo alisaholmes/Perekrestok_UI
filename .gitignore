@@ -1,6 +1,6 @@
 allure-results
 allure-report
-Perekrestok_UI/.env
+.env
 .venv
 ../.idea
 
