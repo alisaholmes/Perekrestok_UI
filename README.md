@@ -90,6 +90,8 @@ Allure TestOps — это тест-менеджмент система для а
 ![autotest](design/images/дашб.png)
 ### Тест-кейсы
 ![autotest](design/images/тест-кейсы.png)
+### Протоколы запусков автотестов
+![autotest](design/images/запуски.png)
 
 ## Интеграция Allure TestOps с Jira
 ### Интеграция тест-кейсов в таск-трекер
