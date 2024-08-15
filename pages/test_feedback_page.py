@@ -5,7 +5,7 @@ from selene import browser
 class Feedback:
 
     def click_leave_a_review(self):
-      with allure.step('нажать на "Оставить отзыв о сайте" справа'):
+      with allure.step('нажать на "Оставить отзыв о сайте" снизу'):
         browser.element(
             '[class="sc-eCstlR djqBVS sc-dacGJm dmQoQs"]').click()
 
