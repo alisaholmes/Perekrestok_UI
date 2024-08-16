@@ -10,6 +10,7 @@ class TextChecking:
       with allure.step('Нажать на кнопку Скидки'):
         browser.element('[class="sc-kstqJO gsLcgV"]').click()
 
+
     def product_card(self):
      with allure.step('Перейти в карточку товара'):
         browser.element('[class="product-card__link"]').click()
