@@ -25,4 +25,5 @@ class TextChecking:
         browser.element(by.partial_text("Укажите свой адрес")).should(be.visible)
 
 
+
 text_checking = TextChecking()

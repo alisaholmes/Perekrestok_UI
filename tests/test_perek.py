@@ -1,11 +1,14 @@
-
 import allure
 from allure_commons.types import Severity
+from selene import browser, be, by
+
 from Perekrestok_UI.pages.test_authorization_negative_page import authorization_negative
+from Perekrestok_UI.pages.test_choosing_delivery_address_page import delivery_address
 from Perekrestok_UI.pages.test_city_selection_page import city
 from Perekrestok_UI.pages.test_empty_cart_page import cart
 from Perekrestok_UI.pages.test_feedback_page import feedback
 from Perekrestok_UI.pages.test_text_checking_page import text_checking
+from Perekrestok_UI.pages.test_clear_to_cart_page import clear_cart
 
 
 @allure.tag("web")
@@ -61,7 +64,7 @@ def test_feedback():
 @allure.tag("web")
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "alisaholmes")
-@allure.feature("Адрес")
+@allure.feature("Адрес доставки")
 @allure.story("Выбор города")
 def test_city_selection():
     text_checking.open()
@@ -69,6 +72,41 @@ def test_city_selection():
     city.search()
     city.select_element()
     city.city_check()
+
+
+@allure.tag("web")
+@allure.severity(Severity.CRITICAL)
+@allure.label("owner", "alisaholmes")
+@allure.feature("Адрес доставки")
+@allure.story("Выбор адреса доставки")
+def test_choosing_delivery_address():
+    text_checking.open()
+    delivery_address.ready_meals()
+    delivery_address.add_product()
+    delivery_address.check_text()
+    delivery_address.list_of_addresses()
+    delivery_address.address_selection()
+    delivery_address.confirmation()
+
+
+@allure.tag("web")
+@allure.severity(Severity.CRITICAL)
+@allure.label("owner", "alisaholmes")
+@allure.feature("Корзина")
+@allure.story("Очистка корзины")
+def test_clear_to_cart():
+    text_checking.open()
+    delivery_address.ready_meals()
+    delivery_address.add_product()
+    delivery_address.check_text()
+    delivery_address.list_of_addresses()
+    delivery_address.address_selection()
+    delivery_address.confirmation()
+    clear_cart.add_product()
+    clear_cart.go_to_shopping_cart()
+    clear_cart.checking_product_availability()
+    clear_cart.clear_button()
+
 
 
 
