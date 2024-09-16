@@ -1,5 +1,7 @@
 import os
 
+import allure_commons
+from selene import support
 import pytest
 from dotenv import load_dotenv
 from selene import browser
@@ -49,9 +51,10 @@ def browser_management(request):
     browser.config.driver = driver
 
     browser.config.base_url = "https://www.perekrestok.ru/"
-    browser.config.timeout = 6.0
+    browser.config.timeout = 10.0
     browser.config.window_height = 1366
     browser.config.window_width = 1024
+    browser.config._wait_decorator = support._logging.wait_with(context=allure_commons._allure.StepContext)
 
     yield browser
 
