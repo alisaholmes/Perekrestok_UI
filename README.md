@@ -63,9 +63,9 @@
 
 
 ## Сборка проекта и запуск тестов в Jenkins с параметрами
-> [Ссылка на сборку в Jenkins](https://jenkins.autotests.cloud/job/Perekrestok_UI/)  
+> [Ссылка на сборку в Jenkins](https://jenkins.autotests.cloud/job/Perekrestok2/)  
 ### Для запуска автотестов в Jenkins  
-> 1. Открыть [задачу в Jenkins](https://jenkins.autotests.cloud/job/Perekrestok_UI/)  
+> 1. Открыть [задачу в Jenkins](https://jenkins.autotests.cloud/job/Perekrestok2/)  
 > 2. Нажать "**Build with Parameters**"  
 > 3. Выбрать парметры 
 > 4. Нажать "**Build**"
