@@ -2,13 +2,13 @@ import allure
 from allure_commons.types import Severity
 from selene import browser, be, by
 
-from pages.test_authorization_negative_page import authorization_negative
-from pages.test_choosing_delivery_address_page import delivery_address
-from pages.test_city_selection_page import city
-from pages.test_empty_cart_page import cart
-from pages.test_feedback_page import feedback
-from pages.test_text_checking_page import text_checking
-from pages.test_clear_to_cart_page import clear_cart
+from Perekrestok_UI.pages.test_authorization_negative_page import authorization_negative
+from Perekrestok_UI.pages.test_choosing_delivery_address_page import delivery_address
+from Perekrestok_UI.pages.test_city_selection_page import city
+from Perekrestok_UI.pages.test_empty_cart_page import cart
+from Perekrestok_UI.pages.test_feedback_page import feedback
+from Perekrestok_UI.pages.test_text_checking_page import text_checking
+from Perekrestok_UI.pages.test_clear_to_cart_page import clear_cart
 
 
 @allure.tag("web")
